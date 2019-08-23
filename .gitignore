@@ -1,2 +1,2 @@
 ./vendor
-kube-scheduler
+scheduler.*
