@@ -1,4 +1,5 @@
 FROM alpine:3.7
-COPY ./kube-scheduler /bin
+COPY ./scheduler /bin
+COPY ./run.sh /bin
 
-ENTRYPOINT ["/bin/scheduler"]
+CMD ["/bin/sh", "/bin/run.sh"]

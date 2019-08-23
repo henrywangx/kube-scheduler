@@ -14,7 +14,7 @@ import (
 const name = "custom-scheduler"
 
 type Scheduler struct {
-	clientSet  *kubernetes.Clientset
+	clientSet *kubernetes.Clientset
 }
 
 func NewScheduler() Scheduler {
@@ -29,12 +29,12 @@ func NewScheduler() Scheduler {
 	}
 
 	return Scheduler{
-		clientSet:  clientSet,
+		clientSet: clientSet,
 	}
 }
 
 func main() {
-	fmt.Println("Start a scheduler!")
+	log.Println("Start a scheduler!")
 
 	scheduler := NewScheduler()
 	scheduler.SchedulePods()
